@@ -70,7 +70,6 @@ export default {
                     prenom: this.prenom,
                 });
             }
-            
         }
     },
 

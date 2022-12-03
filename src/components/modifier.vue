@@ -6,7 +6,7 @@
 
 
     <!-- AddModal -->
-    <section class="container-fluid p-4" v-on:load="getusr()">
+    <section class="container-fluid p-4">
         <div class="row dark">
             <div class="col-md-12">
                 <div class="container-fluid p-4">
@@ -66,10 +66,7 @@ export default {
     methods: {
         async updateUsr( nom, prenom) {
 
-            //   let rep=  await axios.get('http://localhost:3000/user/' + id);
-            //   this.user= rep.data;
              await axios.put('http://127.0.0.1:8000/api/users/' + this.id, { nom: nom, prenom: prenom });
-            window.location.href = "/"
         },
 
 
