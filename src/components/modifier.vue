@@ -21,7 +21,7 @@
                                 v-model="prenom" >
                             <div class="modal-footer m-2">
             
-                                <button type="submit" v-on:click="updateUsr(nom,prenom)" class="btn btn-success" id="submit">modifier</button>
+                                <button type="button" v-on:click="updateUsr(nom,prenom)" class="btn btn-success" id="submit">modifier</button>
                             </div>
                         </div>
                     </form>
@@ -67,6 +67,7 @@ export default {
         async updateUsr( nom, prenom) {
 
              await axios.put('http://127.0.0.1:8000/api/users/' + this.id, { nom: nom, prenom: prenom });
+             window.location.href="/"
         },
 
 

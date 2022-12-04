@@ -50,7 +50,7 @@
                                 </button>
                             </td>
                             <td>
-                                <button type="submit" class="btn btn-outline-danger"
+                                <button type="button" class="btn btn-outline-danger"
                                     v-on:click="remusr(usr.id)"><i class="fa fa-trash"></i></button>
                             </td>
                         </tr>
@@ -89,7 +89,6 @@ export default {
         return {
             nom: { required, minLength: minLength(3) },
             prenom: { required, minLength: minLength(3) },
-            email: { required, email },
         };
     },
     async mounted() {
